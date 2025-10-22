@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Source_Sans_3 as FontSans } from "next/font/google";
 import "./globals.css";
+import Headers from "@/common/Headers";
+import Footer from "@/common/Footer";
 
 const fontsans = FontSans({
   variable: "--font-sans",
@@ -21,8 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fontsans.variable} font-sans antialiased`}>
-        {children}
+        <Headers />
+        <main className=" bg-zinc-300">{children}</main>
+        <Footer />
       </body>
     </html>
   );
 }
+
+// agar mughe kuch bhi change karna hoga like page's pe header and footer ko chor k to mai main m karunga wo as parent change ho jayega okkh!..
+// agar mughe sabhi p change karna hai to mai body k andar changing karunga usse sara chnage ho jayega okkh!...s
