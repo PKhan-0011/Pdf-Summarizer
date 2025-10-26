@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${fontsans.variable} font-sans antialiased`}>
         <Headers />
-        <main className=" bg-zinc-300">{children}</main>
+        <main className="flex-1 ">{children}</main>
         <Footer />
       </body>
     </html>
