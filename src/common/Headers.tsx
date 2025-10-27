@@ -1,14 +1,18 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
-
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import NavLink from "@/common/nav-link";
 
 const Headers = () => {
+  const [isLoggedIn, setisLoggedIn] = useState<boolean>(false);
+
   return (
     <>
       <nav className="container mx-auto flex items-center justify-between px-2 py-4 lg:px-8 ">
         <div className="flex items-center">
-          <Link href={"/"} className="flex items-center gap-1">
+          <NavLink href={"/"} className="flex items-center gap-1">
             <Image
               src="/file-text.png"
               alt="File-Text"
@@ -19,16 +23,25 @@ const Headers = () => {
             <h1 className="font-extrabold lg:text-xl text-gray-900">
               Sapphire
             </h1>
-          </Link>
+          </NavLink>
         </div>
 
         <div className="flex lg:justify-center gap-4 lg:gap-12 lg:items-center">
           <Link href={"/#pricing"}>Pricing</Link>
-          <Link href={"/dashboard"}>Your Sumaries</Link>
+          {isLoggedIn && <Link href={"/dashboard"}>Your Sumaries</Link>}
         </div>
 
         <div className="flex lg:justify-end ">
-          <Link href={"/sign-in"}>Sign In</Link>
+          {isLoggedIn && (
+            <div className="flex gap-2 items-center ">
+              <Link href="/upload">Upload a PDF</Link>
+              <div>Pro</div>
+              <Button>Sign Out</Button>
+            </div>
+          )}
+          <div>
+            <Link href={"/sign-in"}>Sign In </Link>
+          </div>
         </div>
       </nav>
     </>
@@ -36,3 +49,6 @@ const Headers = () => {
 };
 
 export default Headers;
+
+// Yha p abhi todha sa like sign-In karte time p issue hai like kuch condition checking m issue aa rha hai okkh!...
+// setIsLogged in tabi chlega like jab hamm sign-In kar chuke honge okkh!.. uske baad ooriginal wala logic lagega okkh!>..
