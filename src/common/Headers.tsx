@@ -27,20 +27,20 @@ const Headers = () => {
         </div>
 
         <div className="flex lg:justify-center gap-4 lg:gap-12 lg:items-center">
-          <Link href={"/#pricing"}>Pricing</Link>
+          <NavLink href={"/#pricing"}>Pricing</NavLink>
           {isLoggedIn && <Link href={"/dashboard"}>Your Sumaries</Link>}
         </div>
 
         <div className="flex lg:justify-end ">
           {isLoggedIn && (
             <div className="flex gap-2 items-center ">
-              <Link href="/upload">Upload a PDF</Link>
+              <NavLink href="/upload">Upload a PDF</NavLink>
               <div>Pro</div>
               <Button>Sign Out</Button>
             </div>
           )}
           <div>
-            <Link href={"/sign-in"}>Sign In </Link>
+            <NavLink href={"/sign-in"}>Sign In </NavLink>
           </div>
         </div>
       </nav>
