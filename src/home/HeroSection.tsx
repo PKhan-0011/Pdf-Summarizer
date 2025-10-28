@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -24,19 +25,30 @@ const HeroSection = () => {
         </div>
 
         <h1 className="font-extrabold text-3xl py-6 text-center max-w-md ">
-          Transform PDFs into concise summaries
+          Transform PDFs into{" "}
+          <span className="bg-red-200 rounded-xl p-1 px-6">concise</span>{" "}
+          summaries
         </h1>
-        <h2 className="">
+        <h2 className="text-2xl text-gray-500 font-bold tracking-normal">
           Get a beautiful summary reel of the document in seconds.
         </h2>
-        <Button className="">
-          <Link href={"/#pricing"} className="flex gap-2 items-center">
-            <span>Try Sommaire</span>
-          </Link>
-        </Button>
+        <div className="mt-8">
+          <Button className="p-6 py-7  bg-neutral-200  font-bold rounded-full bg-linear-to-r from-black via-[#3b0000] to-red-600 duration-200">
+            <Link href={"/#pricing"} className="flex gap-4 items-center px-6">
+              <span className="text-xl font-semibold text-white">
+                Try Sommaire
+              </span>
+              <ArrowRight className="text-white" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
 };
 
 export default HeroSection;
+
+// Consise jo hai uski jagah mughe like accertinity m nahi hai jo to and fro karta rhta hai aa jata rhta hai waisa kuch banana hai okkh!..
+// and mughe abhi isme framer motion bhar bhar k lagana hai to stay tune..
+// Yha p concise jo hai uski jagah mugeh like 3-4 alag alag chize chalani hai jaise outlines, Abstract, Outlines,

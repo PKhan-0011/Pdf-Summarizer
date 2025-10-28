@@ -10,24 +10,26 @@ const Headers = () => {
 
   return (
     <>
-      <nav className="container mx-auto flex items-center justify-between px-2 py-4 lg:px-8 ">
+      <nav className="relative container mx-auto  flex items-center justify-between px-2 py-4 lg:px-8 mt-2 rounded-lg">
         <div className="flex items-center">
           <NavLink href={"/"} className="flex items-center gap-1">
             <Image
               src="/file-text.png"
               alt="File-Text"
-              width={20}
-              height={30}
-              className="w-5 h-5 lg:w-8 lg:h-8 text-gray-900 hover:rotate-12 transform transition-all duration-300 ease-in-out"
+              width={40}
+              height={40}
+              className="w-10 h-10 lg:w-8 lg:h-8 text-gray-900 hover:rotate-12 transform transition-all duration-300 ease-in-out"
             />
-            <h1 className="font-extrabold lg:text-xl text-gray-900">
+            <h1 className="font-extrabold text-2xl lg:text-xl text-gray-900">
               Sapphire
             </h1>
           </NavLink>
         </div>
 
         <div className="flex lg:justify-center gap-4 lg:gap-12 lg:items-center">
-          <NavLink href={"/#pricing"}>Pricing</NavLink>
+          <NavLink href={"/#pricing"}>
+            <span className="text-xl px-4 font-semibold">Pricing</span>
+          </NavLink>
           {isLoggedIn && <Link href={"/dashboard"}>Your Sumaries</Link>}
         </div>
 
@@ -39,8 +41,10 @@ const Headers = () => {
               <Button>Sign Out</Button>
             </div>
           )}
-          <div>
-            <NavLink href={"/sign-in"}>Sign In </NavLink>
+          <div className="">
+            <NavLink href={"/sign-in"}>
+              <span className="text-xl px-6 font-semibold">Sign In </span>
+            </NavLink>
           </div>
         </div>
       </nav>
