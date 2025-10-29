@@ -3,8 +3,8 @@ import { Pizza } from "lucide-react";
 
 const HeroSection02 = () => {
   return (
-    <div className="flex-col container mx-auto flex items-center justify-center gap-3 ">
-      <div className="inline-flex items-center justify-center p-2 rounded-2xl bg-gray-100 backdrop-blur-xs border border-gray-500/20 mb-4">
+    <div className="flex-col container mx-auto flex items-center justify-center">
+      <div className="inline-flex items-center justify-center p-2 rounded-2xl bg-gray-100 backdrop-blur-xs border border-gray-500/20 mb-2">
         <Pizza className="h-10 w-10 text-rose-600 " />{" "}
         {/* Bhai dekh yha p pizza ki jagah bhut sari chize tughe apne according set karni hai okkh! like pdf ya 2-3 etc etc.. */}
       </div>

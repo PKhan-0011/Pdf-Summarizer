@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 const HeroSection = () => {
   return (
     <section>
-      <div className="relative mx-auto flex flex-col z-0 items-center justify-center py-16 sm:py-20 lg:py-28 transition-all animate-in lg:px-12 max-w-7xl">
+      <div className="relative mx-auto flex flex-col z-0 items-center justify-center py-16 sm:py-20 lg:py-28 transition-all animate-in lg:px-12 max-w-7xl mt-6">
         <div className="flex">
           <div className=" relative p-1 overflow-hidden rounded-full bg-linear-to-r from-rose-200 via-rose-500 to-rose-800 animate-gradient-x group">
             <Badge

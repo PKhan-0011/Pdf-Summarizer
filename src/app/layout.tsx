@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${fontsans.variable} font-sans antialiased`}>
         <Headers />
-        <main className="">{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
