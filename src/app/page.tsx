@@ -3,6 +3,7 @@ import HeroSection02 from "@/home/HeroSection02";
 import BackgroundTest from "@/home/BackgroundTest";
 import HowToWorkSection from "@/home/HowToWorkSection";
 import PricingSection from "@/home/PricingSection";
+import CtaSection from "@/home/CtaSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <HeroSection02 />
         <HowToWorkSection />
         <PricingSection />
+        <CtaSection />
       </div>
     </div>
   );
