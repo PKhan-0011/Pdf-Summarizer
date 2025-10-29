@@ -26,14 +26,16 @@ const HeroSection = () => {
 
         <h1 className="font-extrabold text-3xl py-6 text-center max-w-md ">
           Transform PDFs into{" "}
-          <span className="bg-red-200 rounded-xl p-1 px-6">concise</span>{" "}
+          <span className="bg-red-200 rounded-xl p-1 ml-4 px-6 space-x-4">
+            concise
+          </span>{" "}
           summaries
         </h1>
         <h2 className="text-2xl text-gray-500 font-bold tracking-normal">
           Get a beautiful summary reel of the document in seconds.
         </h2>
         <div className="mt-8">
-          <Button className="p-6 py-7  bg-neutral-200  font-bold rounded-full bg-linear-to-r from-black via-[#3b0000] to-red-600 duration-200">
+          <Button className="p-6 py-7  bg-neutral-200  font-bold rounded-full bg-linear-to-r from-black via-[#3b0000] to-red-600 duration-200 shadow-xl">
             <Link href={"/#pricing"} className="flex gap-4 items-center px-6">
               <span className="text-xl font-semibold text-white">
                 Try Sommaire
