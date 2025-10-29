@@ -6,6 +6,7 @@ import { FileText } from "lucide-react";
 const HowToWorkSection = () => {
   return (
     <section className="relative overflow-hidden bg-gray-50">
+      {/* Yha p grid lagega abhi okkh!.. like ek hi mai ana chiaye sara data...*/}
       <div className="py-12 lg:py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 lg:pt-12 flex flex-col space-y-24">
         {/* ye wala div jo hai wo heading and summary k liye hai...*/}
         <div className="flex flex-col items-center justify-center gap-4">
@@ -22,7 +23,7 @@ const HowToWorkSection = () => {
         </div>
 
         <div className="flex flex-col space-y-24 justify-center items-center">
-          <div className="flex flex-col items-center justify-center gap-4">
+          <div className="flex flex-col items-center justify-center gap-4 hover:border-2 hover:border-gray-300 hover:p-4 hover:rounded-xl transition-all duration-200 cursor-pointer">
             <FileText
               height={60}
               width={60}
@@ -34,7 +35,7 @@ const HowToWorkSection = () => {
             </p>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-4">
+          <div className="flex flex-col items-center justify-center gap-4 hover:border-2 hover:border-gray-300 hover:p-4 hover:rounded-xl transition-all duration-200 cursor-pointer">
             <BrainCircuit
               height={60}
               width={60}
@@ -46,7 +47,7 @@ const HowToWorkSection = () => {
             </p>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-4">
+          <div className="flex flex-col items-center justify-center gap-4 hover:border-2 hover:border-gray-300 hover:p-4 hover:rounded-xl transition-all duration-200 cursor-pointer">
             {/*Image*/}
             <FileOutputIcon
               height={60}
