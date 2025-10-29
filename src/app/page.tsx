@@ -2,6 +2,7 @@ import HeroSection from "@/home/HeroSection";
 import HeroSection02 from "@/home/HeroSection02";
 import BackgroundTest from "@/home/BackgroundTest";
 import HowToWorkSection from "@/home/HowToWorkSection";
+import PricingSection from "@/home/PricingSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <HeroSection />
         <HeroSection02 />
         <HowToWorkSection />
+        <PricingSection />
       </div>
     </div>
   );
