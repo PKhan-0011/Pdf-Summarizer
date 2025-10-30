@@ -3,6 +3,7 @@ import { Source_Sans_3 as FontSans } from "next/font/google";
 import "./globals.css";
 import Headers from "@/common/Headers";
 import Footer from "@/common/Footer";
+import ThemeProvider from "@/context/ThemeContext";
 
 const fontsans = FontSans({
   variable: "--font-sans",
@@ -23,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fontsans.variable} font-sans antialiased`}>
-        <Headers />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Headers />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
