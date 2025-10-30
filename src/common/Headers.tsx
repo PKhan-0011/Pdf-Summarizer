@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import NavLink from "@/common/nav-link";
+import DarkTheme from "@/common/DarkTheme";
 
 const Headers = () => {
   const [isLoggedIn, setisLoggedIn] = useState<boolean>(false);
@@ -47,6 +48,8 @@ const Headers = () => {
             </NavLink>
           </div>
         </div>
+
+        <DarkTheme />
       </nav>
     </>
   );
