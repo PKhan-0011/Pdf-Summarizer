@@ -1,14 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import NavLink from "@/common/nav-link";
 import DarkTheme from "@/common/DarkTheme";
+import { UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 const Headers = () => {
-  const [isLoggedIn, setisLoggedIn] = useState<boolean>(false);
-
   return (
     <>
       <nav className="relative container mx-auto  flex items-center justify-between px-2 py-4 lg:px-8 mt-2 rounded-lg">
@@ -31,24 +29,32 @@ const Headers = () => {
           <NavLink href={"/#pricing"}>
             <span className="text-xl px-4 font-semibold">Pricing</span>
           </NavLink>
-          {isLoggedIn && <Link href={"/dashboard"}>Your Sumaries</Link>}
+          <SignedIn>
+            {" "}
+            <Link href={"/dashboard"}>Your Sumaries</Link>{" "}
+          </SignedIn>
         </div>
 
         <div className="flex lg:justify-end ">
-          {isLoggedIn && (
-            <div className="flex gap-2 items-center ">
+          <SignedIn>
+            <div className="flex gap-2 items-center">
               <NavLink href="/upload">Upload a PDF</NavLink>
               <div>Pro</div>
-              <Button>Sign Out</Button>
+              {/* Bass itna dhyan rakhio like ki Yha p logedIn hai. Still hamm signOut ka Button nahi likhnge okkh!..*/}
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
             </div>
-          )}
-          <div className="">
-            <NavLink href={"/sign-in"}>
-              <span className="text-xl px-6 font-semibold">Sign In </span>
-            </NavLink>
-          </div>
-        </div>
+          </SignedIn>
 
+          <SignedOut>
+            <div>
+              <NavLink href={"/sign-in"}>
+                <span className="text-xl px-6 font-semibold"> Sign In </span>
+              </NavLink>
+            </div>
+          </SignedOut>
+        </div>
         <DarkTheme />
       </nav>
     </>
