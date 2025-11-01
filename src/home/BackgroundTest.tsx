@@ -12,7 +12,7 @@ const BackgroundTest = () => {
         radial-gradient(
           circle at top right,
           rgba(173, 109, 244, 0.5),
-          transparent 70%
+          transparent 100%
         )
       `,
           filter: "blur(40px)",

@@ -1,11 +1,26 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+// import { useState, useEffect } from "react";
 
 const HeroSection = () => {
+  // const words = ["concise", "creative", "modern", "powerful"];
+  // const [index, setIndex] = useState<number>(0);
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setIndex((prev) => (prev + 1) % words.length);
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, []);
+
+  // ek aur chiz dhyan rakhio like ki hamm iska use isliye bhi karte hai taki side effcet p ye dikh jaye okkh!..
+  // useEffect, and ye hamm generally api call, dom maniipulation, localStorage setInterval yha p hamm useEffcet hi use karte ahi okkh!>.
+
   return (
     <section>
       <div className="relative mx-auto flex flex-col z-0 items-center justify-center py-16 sm:py-20 lg:py-28 transition-all animate-in lg:px-12 max-w-7xl mt-6">
@@ -26,8 +41,8 @@ const HeroSection = () => {
 
         <h1 className="font-extrabold text-3xl py-6 text-center max-w-md ">
           Transform PDFs into{" "}
-          <span className="bg-red-200 rounded-xl p-1 ml-4 px-6 space-x-4">
-            concise
+          <span className="bg-red-200 rounded-xl p-1 ml-4 px-2 space-x-4 shadow-xl ">
+            consice
           </span>{" "}
           summaries
         </h1>
@@ -46,7 +61,7 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
-  ); 
+  );
 };
 
 export default HeroSection;
